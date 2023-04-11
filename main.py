@@ -16,7 +16,7 @@ model_engine = "text-davinci-003"
 def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
-@app.route("/api/image-process", methods=["POST"])
+@app.route("/api/image-process", methods=['POST'])
 def image_process():
     from werkzeug.utils import secure_filename
     # from werkzeug.datastructures import  FileStorage
@@ -45,7 +45,7 @@ def image_process():
     
 
 # Endpoint for processing user queries
-@app.route("/api/generate-answer", methods=["POST"])
+@app.route("/api/generate-answer", methods=['POST'])
 def query_bot():
     
     # Get the user query from the request body
