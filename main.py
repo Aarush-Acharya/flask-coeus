@@ -12,6 +12,10 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 model_engine = "text-davinci-003"
 
+@app.route('/')
+def index():
+    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+
 @app.route("/api/image-process", methods=["POST"])
 def image_process():
     from werkzeug.utils import secure_filename
