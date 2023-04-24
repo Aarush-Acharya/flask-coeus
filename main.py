@@ -49,7 +49,7 @@ def image_process():
 def query_bot():
     
     # Get the user query from the request body
-    user_query = request.json["query"]
+    user_query = request.json['query']
     
     # Call OpenAI's GPT-3 API to generate a response
     response = openai.Completion.create(
