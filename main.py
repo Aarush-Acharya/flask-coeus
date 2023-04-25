@@ -17,7 +17,6 @@ def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
 @app.route("/api/image-process", methods=['POST'])
-@CORS()
 def image_process():
     from werkzeug.utils import secure_filename
     # from werkzeug.datastructures import  FileStorage
